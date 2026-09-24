@@ -417,7 +417,7 @@ document.documentElement.classList.add('js');
   }
 
   var SUPABASE_URL = 'https://buasiiuvzxpbzrpqlnfy.supabase.co';
-  var ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ1YXNpaXV2enhwYnpycHFsbmZ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI2NDM4MzgsImV4cCI6MjA3ODIxOTgzOH0.sQ8EOxm6MfMqUE5BBvvcIryNvFb-0anxvW3KvmabGC0';
+  var ANON_KEY = 'sb_publishable_Us6gDtETn4k93cohKP6PTw_gyVavVib';
   var form = document.getElementById('lead-form');
   var msg = document.getElementById('form-msg');
   form.addEventListener('submit', function(e){
@@ -430,7 +430,7 @@ document.documentElement.classList.add('js');
     msg.textContent = 'Sending…';
     fetch(SUPABASE_URL + '/rest/v1/kaleo_leads', {
       method:'POST',
-      headers:{'apikey':ANON_KEY, 'Authorization':'Bearer '+ANON_KEY, 'Content-Type':'application/json'},
+      headers:{'apikey':ANON_KEY, 'Content-Type':'application/json'},
       body: JSON.stringify({
         name:name, phone:phone||null, email:email||null,
         interest:form.interest.value, message:form.message.value.trim()||null,
